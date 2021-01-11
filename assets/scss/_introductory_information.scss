@@ -1,0 +1,73 @@
+@import '~sass/mixins/introductory_information_paragraph';
+@import '~sass/mixins/header_big';
+@import '~sass/mixins/standard_font';
+
+.introductory-information{
+    background: url('../assets/img/scissors.png');
+    background-position: 10px 2vw;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+
+    &__header{
+        @include header-big();
+        margin:216px 0;
+        margin: 10vw 0;
+        padding:0 5px;
+    }
+
+    &__flex-container{
+        display:flex;
+        padding: 0 2vw 7vw;
+        justify-content: space-between;
+        flex-wrap:nowrap;
+        flex-direction: row;
+        align-items: center;
+        @media(max-width:1200px){
+            flex-direction: column;
+        }
+    }
+
+    &__paragraphs-container{
+        flex-basis: calc(100vw - 700px);
+    }
+
+    &__decoration-container{
+        width:552px;
+        height:448px;
+        background: url('../assets/img/blur.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        @media(max-width:900px){
+            width: 290px;
+             height: 223px;
+            background-size: cover;
+        }
+    }
+
+    &__decoration-image{
+        position:absolute;
+        top:83px;
+        right:137px;
+        @media(max-width:900px){
+            top: 10%;
+            right: 20%;
+            width: 90%;
+        }
+    }
+
+    &__paragraph--top{
+        @include introductory-information__paragraph();
+        @include standard-font();
+        max-width:656px;
+    }
+
+    &__paragraph--bottom{
+        @include introductory-information__paragraph();
+        color:#3E4555;
+        font-family:PlayfairDisplay-Regular;
+        font-size:27px;
+        max-width:627px;
+    }
+
+}

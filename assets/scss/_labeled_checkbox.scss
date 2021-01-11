@@ -1,0 +1,15 @@
+@import '~sass/mixins/standard_lato_font';
+
+.labeled-checkbox{
+    display:flex;
+    align-items: center;
+    @include standard-lato-font();
+    font-size: 21px;
+
+    &__input{
+        border: 2px solid #E0E6ED;
+        margin-right:10px;
+        height:1.3em;
+        width:1.3em;
+    }
+}

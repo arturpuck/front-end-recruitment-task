@@ -1,0 +1,16 @@
+@mixin money-button{
+    background-color:#29AF8A;
+    font-family:Lato-Bold;
+    font-size:40px;
+    line-height:88px;
+    flex-basis:20%;
+    text-align: center;
+    border:none;
+    border-radius: 5px;
+    cursor:pointer;
+    @media(max-width:850px){
+        flex-basis: 60%;
+        min-width:200px;
+        margin:10px 0;
+    }
+}
